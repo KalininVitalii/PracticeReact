@@ -1,9 +1,17 @@
 import PropTypes from 'prop-types';
+import { Name, Resalt } from './user.styled';
+
 export const User = ({ user: { name, email } }) => {
+  const isOrange = email.includes('biz');
+
   return (
     <div>
-      <p>Name: {name}</p>
-      <p>Email: {email}</p>
+      <Name>
+        Name: <Resalt>{name}</Resalt>
+      </Name>
+      <Name>
+        Email: <Resalt isOrange={isOrange}>{email}</Resalt>
+      </Name>
     </div>
   );
 };
