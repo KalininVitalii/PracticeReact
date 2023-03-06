@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
-import { Name, Resalt } from './user.styled';
+import { Name, Resale } from './user.styled';
 
-export const User = ({ user: { name, email } }) => {
+export const User = ({ user: { name, email, id }, userDelete }) => {
   const isOrange = email.includes('biz');
 
   return (
     <div>
       <Name>
-        Name: <Resalt>{name}</Resalt>
+        Name: <Resale>{name}</Resale>
       </Name>
       <Name>
-        Email: <Resalt isOrange={isOrange}>{email}</Resalt>
+        Email: <Resale isOrange={isOrange}>{email}</Resale>
       </Name>
+      <button onClick={() => userDelete(id)}>Delete</button>
     </div>
   );
 };

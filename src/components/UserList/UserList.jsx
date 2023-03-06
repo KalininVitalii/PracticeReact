@@ -1,12 +1,12 @@
 import { User } from 'components/User/users';
 import PropTypes from 'prop-types';
 
-export const UserList = ({ users }) => {
+export const UserList = ({ users, userDelete }) => {
   return (
     <ul>
       {users.map(user => (
         <li key={user.id}>
-          <User user={user} />
+          <User user={user} userDelete={userDelete} />
         </li>
       ))}
     </ul>

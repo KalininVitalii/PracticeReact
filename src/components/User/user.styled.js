@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Resalt = styled.span`
+export const Resale = styled.span`
   color: ${({ isOrange }) => (isOrange ? 'orange' : 'blue')};
 `;
 
@@ -10,7 +10,7 @@ export const Name = styled.p`
   &:hover {
     background-color: blue;
   }
-  &:hover ${Resalt} {
+  &:hover ${Resale} {
     color: red;
   }
 `;
